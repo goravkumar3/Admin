@@ -17,6 +17,7 @@ const studentCard = document.querySelector("#studentCard");
 const approved = document.querySelector("#approveStudentInfo");
 const rejected = document.querySelector("#rejectedStudentInfo");
 const pending = document.querySelector("#pendingStudentInfo");
+const loader = document.querySelector(".loader");
 studentCard.style.display="flex";
 pending.style.display="none";
 approved.style.display="none";
@@ -64,7 +65,8 @@ setTimeout(() => {
        console.log(data);
       });
     });
-}, 1000);
+    loader.style.display="none";
+}, 3000);
 // pending student Card
 setTimeout(() => {
   firebase
@@ -127,8 +129,12 @@ setTimeout(() => {
     });
 }, 2000);
 let showPending=() => {
+  loader.style.display="flex";
   studentCard.style.display="none";
-  pending.style.display="block";
+  setTimeout(() => {
+    pending.style.display="block";
+    loader.style.display="none";
+  }, 3000);
   approved.style.display="none";
   rejected.style.display="none";
    
@@ -156,20 +162,28 @@ let showPending=() => {
       name.textContent=data.FullName;
       });
       });
-  }, 2000);
+  }, 3000);
   let showReject=()=>{
+    loader.style.display="flex";
     studentCard.style.display="none";
     pending.style.display="none";
     approved.style.display="none";
-    rejected.style.display="block";
+    setTimeout(() => {
+    loader.style.display="none";
+      rejected.style.display="block";
+    }, 3000);
     
       // alert("there are nothing to display");
   }
   let allStudent=()=>{
-    studentCard.style.display="flex";
     pending.style.display="none";
     approved.style.display="none";
     rejected.style.display="none";
+    loader.style.display="flex";
+    setTimeout(() => {
+      studentCard.style.display="flex";
+    loader.style.display="none";
+    }, 3000);
   }
   //aprove student card
   setTimeout(() => {
@@ -196,9 +210,13 @@ let showPending=() => {
       });
   }, 2000);
   let showApprove=()=>{
+    loader.style.display="flex";
     studentCard.style.display="none";
     pending.style.display="none";
-    approved.style.display="flex";
+    setTimeout(() => {
+    loader.style.display="none";
+      approved.style.display="flex";
+    }, 3000);
     rejected.style.display="none";
     
       // alert("there are nothing to display");
