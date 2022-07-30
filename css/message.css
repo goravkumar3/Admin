@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  nav{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.3);
+    top: 0;
+  background: #111517;
+  }
+  nav img{
+    height: 40px;
+    cursor: pointer;
+  }
+  main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+    }
+    .container{
+    background-color: rgb(19 17 29);
+    width: 60%;
+    height: auto;
+    padding: 40px;
+  }
+  .input-floating {
+    margin: 15px 0;
+    text-align: center;
+  }
+  label {
+    font-size: 25px;
+    display: block;
+    text-transform: uppercase;
+    color: #d8030e;
+  }
+  input{
+    margin: 15px 0;
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    font: inherit;
+    padding-left:20px;
+    text-align: left;
+    color: #ffffff;
+    background: #d8030e;
+  }
+.btn{
+    background-color: transparent;
+    border: none;
+    outline: none ;
+    cursor: pointer;
+}
+.messageDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.messageDiv button{
+    border: none;
+    outline: none;
+    background-color: #371818d1;
+    width: 10%;
+    height: 50px;
+    color: white;
+    padding: 20px 0;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    left: 67.5%;
+}
+.showMessage{
+  display: flex;
+  height: auto;
+  margin-top: 20px;
+  background-color: #362c64;
+  padding: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  gap: 20px;
+}
+.hide{
+  display: flex;
+  height: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  gap: 20px;
+}
+.h3{
+  flex: 1;
+}
+.icon{
+  height: 30px;
+}
+@media  only screen and (max-width: 550px) {
+  .container{
+    width: 100%;
+  }
+  .messageDiv button{
+    width: 25%;
+  } 
+}
