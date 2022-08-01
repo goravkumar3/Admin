@@ -56,8 +56,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 5
-    70vh;
+    min-height: 50vh;
 }
 /**
   * follow-the-leader
