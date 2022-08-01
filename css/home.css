@@ -116,7 +116,7 @@ nav{
 .studentCard{
     margin-top: 30px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
